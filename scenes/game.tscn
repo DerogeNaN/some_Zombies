@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu8xj8o3k2swi"]
+
+[ext_resource type="Script" uid="uid://bwfrrneecc70" path="res://scripts/game_manager.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b1tfgbw87rass" path="res://scenes/utilities/splash_screen.tscn" id="2_yqjtg"]
+
+[node name="GameManager" type="Node" node_paths=PackedStringArray("world3D", "world2D", "gui")]
+script = ExtResource("1_uwrxv")
+world3D = NodePath("World3D")
+world2D = NodePath("World2D")
+gui = NodePath("GUI")
+
+[node name="World3D" type="Node3D" parent="."]
+
+[node name="World2D" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashScreenManager" parent="GUI" instance=ExtResource("2_yqjtg")]
+layout_mode = 1

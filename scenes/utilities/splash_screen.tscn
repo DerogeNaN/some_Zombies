@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1tfgbw87rass"]
+
+[ext_resource type="Script" uid="uid://cj5181ii5bhdx" path="res://scripts/splashscreen_manager.gd" id="1_hiaet"]
+[ext_resource type="Texture2D" uid="uid://rkyqrq1w7fu0" path="res://assets/sprites/godotsplash.png" id="1_xy82k"]
+[ext_resource type="PackedScene" uid="uid://b875ybqekfrub" path="res://scenes/levels/test_scene.tscn" id="2_jq2rb"]
+[ext_resource type="Texture2D" uid="uid://bj5itbqoes0d6" path="res://assets/sprites/Test Splash.png" id="3_jq2rb"]
+
+[node name="SplashScreenManager" type="Control" node_paths=PackedStringArray("splashScreenContainer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hiaet")
+loadScene = ExtResource("2_jq2rb")
+splashScreenContainer = NodePath("CenterContainer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.1254902, 0.20392157, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Splash1" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_xy82k")
+
+[node name="Splash2" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_jq2rb")

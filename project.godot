@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="some_Zombies"
-run/main_scene="uid://liskn038xog1"
+run/main_scene="uid://cu8xj8o3k2swi"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://assets/sprites/icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
 
 [rendering]
 
